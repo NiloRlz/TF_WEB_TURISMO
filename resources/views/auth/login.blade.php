@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-      
-            <div class="row justify-content-center">
+<div class="contenedor">
+
        
 
 <div class="info">
@@ -28,15 +26,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
 <style>
-    *{
+      *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Gabarito', sans-serif;
 }
 body{
-
-    margin: 0;
+  margin-bottom: 30px;
+   
     min-height: 100vh;
     background: linear-gradient(80deg, rgba(40, 42, 55, 1) , rgba(40, 42, 55, 0.4)), url(https://content.emarket.pe/common/collections/content/c8/57/c8576bc0-f5ea-4093-b16b-7a446b388efa.jpg);
     opacity: 0.9;
@@ -53,7 +51,7 @@ body{
   width: 1000px;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
   margin: auto;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 .info{
@@ -78,6 +76,7 @@ body{
 }*/
 
 .txt-1{
+  font-family: 'Roboto', sans-serif;
   color: white;
   text-transform: capitalize;
   font-size: 20px;
@@ -98,6 +97,7 @@ body{
   margin-left: 170px;
 }
 .txt-2{
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 18px;
 
@@ -107,14 +107,15 @@ body{
   padding: 150px 100px;
   width: 50%;
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
+  /*background-color: rgba(240, 248, 255, 0.286);
+  backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
 }
 .form h2{
-    text-shadow: 0.5px  0px 0px #097ef6,
-               0px  1px 0px #097ef6,
-              -0.7px  0px 0px #097ef6,
-               0px -0px 0px #097ef6;
-  
   font-family: 'Kanit', sans-serif;
   color: #097ef6;
   font-size: 35px;
@@ -134,11 +135,21 @@ body{
   margin-bottom: 20px;
   background-color: #f9f9f9;
 }
+.box:focus{
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
 .inputs .olv{
+  font-family: 'Roboto', sans-serif;
   color: blue;
   text-decoration: none;
   font-size: 15px;
   margin-bottom: 35px
+}
+.input .olv:hover{
+  color: red;
+  cursor: pointer;
 }
 .submit{
   background-color: #097ef6;
@@ -152,16 +163,12 @@ body{
 .submit:hover{
   background-color: #15adff;
 }
-.form-check-labe{
-    margin-bottom: 40px;
-    text-align: left;
-}
 
 @media(max-width:990px){
   .contenedor{
     width: 350px;
     height: 600px;
-    margin-top: 100px;
+    margin-top: 20px;
   }
   .info{
     display: none;
@@ -170,19 +177,14 @@ body{
     /*height: 100%;*/
     width: 100%;
     padding: 30px;
-    border-radius: 25px;
   }
 
   .form h2{
     margin-top: 40px;
   }
+
 }
 </style>
-
-
-
-
-
 
                 <div class="form">
 
@@ -190,10 +192,8 @@ body{
                     <form  method="POST" action="{{ route('login') }}">
                         @csrf
 
-                     
-                     
-
                             <div class="inputs">
+                              
                                 <input id="email" type="email" class="box" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Ingrese su correo">
 
                                 @error('email')
@@ -203,10 +203,6 @@ body{
                                 @enderror
                             </div>
                         
-
-                        
-                         
-
                             <div class="inputs">
                                 <input id="password" type="password" class="box" name="password" required autocomplete="current-password" placeholder="Ingrese su contraseña">
 
@@ -216,23 +212,40 @@ body{
                                     </span>
                                 @enderror
                             </div>
-                     <style>
-                        .form-check-label{
-                            text-align: left;
-                        }
-                     </style>  
 
-                        <div class="inputs">
-                            <div class="inputs">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">                            
+                            
+<style>
 
-                                    <p class="form-check-label" for="remember">
-                                    Recordármelo
-                                    </p>
-                                </div>
+
+.cyberpunk-checkbox {
+  display: flex;
+  margin-right: 10px;
+}
+
+.cyberpunk-checkbox-label{
+  display: flex;
+ 
+}
+.inpt{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+</style>  
+                      
+
+
+                            <div class="inpt">
+                            <input class="cyberpunk-checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <label class="cyberpunk-checkbox-label">
+                                   
+                                    <p for="remember"> Recordármelo</p>            
+                                </label>
                             </div>
-                        </div> 
+                       
                         
                         <div class="inputs">
                             <div class="inputs">
@@ -249,8 +262,6 @@ body{
                         </div>
                     </form>
                 </div>
-            </div>
-        
-    </div> 
+    
 </div>
 @endsection

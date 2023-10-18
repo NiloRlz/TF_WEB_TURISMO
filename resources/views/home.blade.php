@@ -26,7 +26,9 @@ color: #fff;
     }
 </style>
 
-<div class="container">
+<div class="container1">
+
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -47,13 +49,15 @@ color: #fff;
     </div>
 </div>
 <br><br>
+<script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
 <style>
 body{
 background: linear-gradient(90deg, rgba(40, 42, 55, 1) ,rgba(40, 42, 55, 0.9), rgba(40, 42, 55, 0.4)), url(https://content.emarket.pe/common/collections/content/21/4f/214f7dfa-2298-4827-b60c-b48730e0df14.jpg);
 
-background-position: center;
 background-repeat: no-repeat;
-background-size: cover;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
 }
 
 * {
@@ -62,9 +66,15 @@ background-size: cover;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.pi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  
+}
 
-
-.container1 {
+.container {
     display:grid;
     grid-template-columns: repeat(2,50%);
     padding:20px;
@@ -168,9 +178,17 @@ form > button:hover,
  }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:920px) {
     .container {
-        width: 95%;
+        margin-top: 50px;
+        position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+
+        width: 90%;
         display: flex;
         flex-direction: column;
         gap:20px;
@@ -180,7 +198,10 @@ form > button:hover,
 }
 
 </style>
-<div class="container1">
+<div class="pi">
+    
+</div>
+<div class="container">
 
         <form action="https://formsubmit.co/nilorosales76@gmail.com" method="POST">
             <h2>CONTACTAME</h2>
