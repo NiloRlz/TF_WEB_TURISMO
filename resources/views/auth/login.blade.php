@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="papi">
 <div class="contenedor">
 
        
@@ -46,21 +47,24 @@ body{
 
 /* The switch - the box around the slider */
 .contenedor{
+  border-radius: 25px;
   display: flex;
-  height: 700px;
-  width: 1000px;
+  height: 600px;
+  width: 780px;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .info{
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
     background-image: url(https://seturismo.pe/wp-content/uploads/2018/12/parque-nacional-tingo-maria-huanuco.jpg);
     opacity: 0.9;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 110px 50px;
+  padding: 100px 50px;
   width: 50%;
   text-align: center;
 }
@@ -85,13 +89,14 @@ body{
 .info h2{
     font-family: 'Kanit', sans-serif;
   color:#fff ;
+  text-shadow: 1px 3px 2px #525050;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 25px;
 }
 .info hr{
     color: #fff;
-  width: 200px;
+  width: 70px;
   border: 4px solid #fff;
   margin-bottom: 25px;
   margin-left: 170px;
@@ -104,7 +109,9 @@ body{
 }
 
 .form{
-  padding: 150px 100px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 100px 70px;
   width: 50%;
   text-align: center;
   background-color: #ffffff;
@@ -168,15 +175,20 @@ body{
   .contenedor{
     width: 350px;
     height: 600px;
-    margin-top: 20px;
+    border-radius: 25px;
+  
   }
   .info{
     display: none;
   }
   .form{
-    /*height: 100%;*/
+    border-radius: 25px;
+    *height: 300px;
     width: 100%;
     padding: 30px;
+  }
+  .papi{
+    margin-top: 20px;
   }
 
   .form h2{
@@ -264,4 +276,6 @@ body{
                 </div>
     
 </div>
+</div>
+
 @endsection

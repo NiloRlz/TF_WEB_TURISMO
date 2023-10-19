@@ -6,22 +6,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <style>
-    .card-header{
-        color: #CA2800;
-        font-size: 30px;
-        text-shadow: 1px 0px 2px #A7A7A7;
-        text-align: center;
-        font-family: 'Young Serif', serif;
-    }
     .card{
 background: linear-gradient(90deg, rgba(40, 42, 55, 1) ,rgba(40, 42, 55, 0.9), rgba(40, 42, 55, 0.4));
-
+padding: 20px;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 text-align: center;
-color: #fff;
+
 
     }
 </style>
@@ -32,9 +35,9 @@ color: #fff;
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('HUÁNUCO') }}</div>
+                <div class="card-header">{{ __('Gracias por visitarnos') }}</div>
 
-                <div class="card-body">
+                <div class="grc">
                     
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -42,7 +45,7 @@ color: #fff;
                         </div>
                     @endif
 
-                    {{ __('Gracias por registrarse!') }}
+                    {{ __('Usted esta registrado - Travel HUÁNUCO') }}
                 </div>
             </div>
         </div>
@@ -58,6 +61,7 @@ background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
                 background-attachment: fixed;
+             
 }
 
 * {
@@ -66,14 +70,24 @@ background-repeat: no-repeat;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.card-header{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 1px 0px 2px #A7A7A7;
+}
 .pi{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30%;
-  
 }
-
+.grc{
+    color: #FAFAFA;
+    text-align:center;
+    font-family: 'Dosis', sans-serif;
+}
 .container {
     display:grid;
     grid-template-columns: repeat(2,50%);
@@ -193,7 +207,20 @@ form > button:hover,
         flex-direction: column;
         gap:20px;
     }
-
+    .card-header{
+        font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+.card{
+background: linear-gradient(90deg, rgba(40, 42, 55, 1) ,rgba(40, 42, 55, 0.9), rgba(40, 42, 55, 0.4));
+padding: 0px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+text-align: center;
+}
 
 }
 

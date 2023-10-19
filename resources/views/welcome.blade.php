@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-  
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Escudo_De_Huanuco.svg/890px-Escudo_De_Huanuco.svg.png">
+   
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
